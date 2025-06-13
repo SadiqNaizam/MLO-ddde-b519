@@ -4,89 +4,98 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Neutrals */
+    --background: 40 33% 97%; /* Warm Off-White */
+    --foreground: 0 0% 15%;   /* Deep Charcoal */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 40 33% 98%;       /* Slightly Lighter Warm Off-White */
+    --card-foreground: 0 0% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 40 33% 98%;
+    --popover-foreground: 0 0% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Core Palette */
+    --primary: 30 100% 60%;             /* Saffron Orange */
+    --primary-foreground: 0 0% 15%;     /* Deep Charcoal for Saffron */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --indigo: 275 100% 25%;             /* Deep Indigo */
+    --indigo-foreground: 0 0% 98%;      /* Light for Indigo */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: 140 52% 55%;           /* Emerald Green */
+    --secondary-foreground: 0 0% 15%;   /* Deep Charcoal for Emerald */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 68% 52%;               /* Metallic Gold */
+    --accent-foreground: 0 0% 15%;      /* Deep Charcoal for Gold */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Utility Colors */
+    --muted: 0 0% 90%;                  /* Soft Gray */
+    --muted-foreground: 0 0% 40%;       /* Darker Gray */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;       /* Bright Red (Can be adjusted if needed) */
+    --destructive-foreground: 0 0% 98%;
 
-    --radius: 0.5rem;
+    --border: 0 0% 85%;                 /* Soft Gray */
+    --input: 0 0% 85%;                  /* Soft Gray */
+    --ring: 30 100% 60%;                /* Saffron Orange (Primary color for focus) */
 
-    --sidebar-background: 0 0% 98%;
+    /* Sizing & Rounding */
+    --radius: 0.5rem;                   /* 8px */
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Typography */
+    --font-sans: "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar Theming */
+    --sidebar-background: 40 33% 96%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--secondary); /* Using main secondary (Emerald) as sidebar accent */
+    --sidebar-accent-foreground: var(--secondary-foreground);
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: var(--ring);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark Mode Neutrals */
+    --background: 275 30% 10%;         /* Deep Indigo-Charcoal */
+    --foreground: 40 33% 90%;          /* Light Warm Off-White/Gray */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 275 30% 12%;
+    --card-foreground: 40 33% 90%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 275 30% 12%;
+    --popover-foreground: 40 33% 90%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Dark Mode Core Palette */
+    --primary: 30 100% 55%;             /* Deeper Saffron Orange */
+    --primary-foreground: 0 0% 10%;     /* Very Dark Charcoal for Saffron */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --indigo: 275 100% 35%;             /* Brighter Deep Indigo */
+    --indigo-foreground: 0 0% 95%;      /* Very Light for Indigo */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --secondary: 140 60% 35%;           /* Deeper Emerald Green */
+    --secondary-foreground: 0 0% 95%;   /* Very Light for Emerald */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 45 70% 60%;               /* Brighter Metallic Gold */
+    --accent-foreground: 0 0% 10%;      /* Very Dark Charcoal for Gold */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    /* Dark Mode Utility Colors */
+    --muted: 275 20% 20%;               /* Dark Gray, Indigo Tint */
+    --muted-foreground: 0 0% 65%;       /* Lighter Gray */
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --destructive: 0 70% 45%;           /* Deeper Red */
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 275 20% 25%;              /* Darker Gray, Indigo Tint */
+    --input: 275 20% 25%;
+    --ring: 30 100% 55%;                /* Dark Saffron Orange (Primary color for focus) */
+
+    /* Dark Mode Sidebar Theming */
+    --sidebar-background: 275 30% 9%;
+    --sidebar-foreground: 40 33% 88%;
+    --sidebar-border: 275 20% 22%;
+    /* --sidebar-primary, --sidebar-primary-foreground, --sidebar-accent, --sidebar-accent-foreground, --sidebar-ring will automatically use dark mode versions from var(--primary) etc. */
   }
 }
 
@@ -96,6 +105,10 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans; /* Apply base font */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif; /* Apply heading font */
   }
 }
